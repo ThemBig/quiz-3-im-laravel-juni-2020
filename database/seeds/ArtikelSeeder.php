@@ -13,18 +13,27 @@ class ArtikelSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('artikel')->insert([
+        DB::table('artikels')->insert([
             [
+                'user_id' => 1,
                 'judul' => Str::random(10),
                 'isi' => Str::random(30),
                 'slug' => Str::random(10),
                 'tag' => Str::random(20),
             ],
             [
+                'user_id' => 1,
                 'judul' => Str::random(10),
                 'isi' => Str::random(30),
                 'slug' => Str::random(10),
                 'tag' => Str::random(20),
+            ],
+            [
+                'user_id' => 1,
+                'judul' => "Cara Menggunakan Blade",
+                'isi' => "Buka dokumentasi pada laravel yang anda gunakan",
+                'slug' => "cara-menggunakan-blade",
+                'tag' => "info,web,laravel",
             ]
         ]);
     }
